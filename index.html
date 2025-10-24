@@ -8,19 +8,38 @@
     <link rel="stylesheet" href="css/main.css" />
     <script defer src="main.js"></script>
     <script src="https://kit.fontawesome.com/b4ea97493e.js" crossorigin="anonymous"></script>
+    <script src="js/navbar.js"></script>
 </head>
 <body>
     <header>
-        <div class="nav-container">
-            <img class="logo" src="media/logo.png" alt="Escuela de Canotaje" >
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#cursos">Cursos</a></li>
-                    <li><a href="#inscripciones">Inscripciones</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img class="logo" src="media/logo.png" alt="Escuela de Canotaje">
+                <button class="navbar-toggle" id="navbarToggle">
+                    ☰
+                </button>
+            </div>
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Inscripciones</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Quienes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contacto</a>
+                </li>
+            </ul>
         </div>
+    </nav>
     </header>
 
     <main>
@@ -78,10 +97,5 @@
 
     </footer>
 
-    <script>
-        // Script mínimo: insertar año actual
-        document.getElementById('year').textContent = new Date().getFullYear();
-        // Aquí puedes agregar lógica JS adicional en main.js
-    </script>
 </body>
 </html>

@@ -5,38 +5,11 @@
     font-family: Arial, sans-serif;
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+header {
+    color: #0E2440;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.nav-menu {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    align-items: center;
-    list-style: none;
-    font-size: 20px;
-}
-
-.nav-menu li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-.nav-menu li a:hover {
-    color: #102847;
-}   
-
-.logo {
-    max-width: 130px;
-    height: 130px;
-}
 
 
 .banner {
@@ -59,14 +32,14 @@
     gap: 20px;  
     padding: 10px;
     width: 500px;
-    height: 100px;
+    height: 70px;
     justify-content: center;    
 }   
 .botones button {
     padding: 15px 30px;
     font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -231,6 +204,7 @@ footer a:hover {
     justify-content: center;
     gap: 10px;
     background-color: #f0f8ff;
+    padding-bottom: 40px;
 }
 .apoyin h3 {
     font-size: 18px;
@@ -249,10 +223,6 @@ footer a:hover {
     .info {
         max-width: 100%;
     }
-    .apoyo {
-        flex-direction: column;
-        gap: 20px;
-    }  
     .info-footer {
         flex-direction: column;
         gap: 20px;
@@ -261,3 +231,181 @@ footer a:hover {
         height: 100px;
     }   
 }
+/* ===== ESTILOS DEL NAVBAR RESPONSIVE ===== */
+
+/* Reset básico para el navbar */
+.navbar * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #f0f8ff;   
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #0b0283d2;
+}
+
+.nav-link.active {
+    color: #f59a11;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background-color: #0E2440;
+    border-radius: 2px;
+}
+
+/* Botón hamburguesa para móviles */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0E2440;
+    padding: 10px;
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    z-index: 1002;
+}
+
+/* Estilos responsive - MENÚ SUPERPUESTO */
+@media (max-width: 768px) {
+    .navbar-header {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        z-index: 1001;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+        max-height: 500px; /* Ajusta según la cantidad de elementos */
+        padding: 20px 0;
+    }
+
+    .nav-item {
+        margin: 8px 0;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar-nav.active .nav-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Retraso escalonado para la animación de los items */
+    .navbar-nav.active .nav-item:nth-child(1) { transition-delay: 0.1s; }
+    .navbar-nav.active .nav-item:nth-child(2) { transition-delay: 0.15s; }
+    .navbar-nav.active .nav-item:nth-child(3) { transition-delay: 0.2s; }
+    .navbar-nav.active .nav-item:nth-child(4) { transition-delay: 0.25s; }
+    .navbar-nav.active .nav-item:nth-child(5) { transition-delay: 0.3s; }
+
+    .nav-link {
+        display: block;
+        padding: 15px 0;
+        font-size: 18px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background-color: #12315ad2;
+        color: white;
+    }
+
+    .nav-link.active::after {
+        display: none;
+    }
+
+    .nav-link.active {
+        background-color: #0E2440;
+        color: white;
+    }
+}
+
