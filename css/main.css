@@ -337,6 +337,7 @@ footer a:hover {
     .navbar-header {
         justify-content: flex-start;
         padding-left: 20px;
+
     }
 
     .navbar-toggle {
@@ -409,3 +410,205 @@ footer a:hover {
     }
 }
 
+
+
+/* ===== FIN ESTILOS DEL NAVBAR RESPONSIVE ===== */
+/* EMPIEZA CSS DEL CARRUSEL */
+.professor-carousel-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size:24px ;
+    display: grid;
+    place-items: center;
+}
+.section-description {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.section-title {
+    padding-top:30px;
+    text-align: center;
+    font-size: 20px;
+    color: #0e2440;
+    font-weight: 700;
+}
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.professor-card {
+    min-width: 100%;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background-color: #f5f5f5fa;
+}
+
+.professor-image-container {
+    flex: 0 0 280px;
+}
+
+.professor-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.professor-info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.professor-name {
+    font-size: 1.6rem;
+    color: #0e2440;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.professor-role {
+    font-size: 1.1rem;
+    color: #0e2440;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #071f3f;
+}
+
+.professor-bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.professor-specialty {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.specialty-tag {
+    background: #0e2440;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.carousel-btn {
+    background: #0e2440;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background: #183c6b;
+    transform: scale(1.05);
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #0e2440;
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .professor-carousel-wrapper {
+        padding: 1rem;
+    }
+    
+    .professor-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .professor-image-container {
+        flex: 0 0 auto;
+        width: 200px;
+    }
+    
+    .professor-image {
+        height: 200px;
+    }
+    
+    .carousel-controls {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .professor-image-container {
+        width: 160px;
+    }
+    
+    .professor-image {
+        height: 160px;
+    }
+    
+    .professor-name {
+        font-size: 1.4rem;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

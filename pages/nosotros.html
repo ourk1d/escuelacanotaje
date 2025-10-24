@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Escuela de Canotaje - Quienes Somos</title>
+    <meta name="description" content="Sitio de la Escuela de Canotaje" />
+
+    <script defer src="main.js"></script>
+    <script src="https://kit.fontawesome.com/b4ea97493e.js" crossorigin="anonymous"></script>
+    <script src="../js/navbar.js"></script>
+    <link rel="stylesheet" href="../css/main.css"/>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img class="logo" src="../media/logo.png" alt="Escuela de Canotaje">
+                <button class="navbar-toggle" id="navbarToggle">
+                    ☰
+                </button>
+            </div>
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./cursos.html" class="nav-link">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./inscripciones.html" class="nav-link">Inscripciones</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./nosotros.html" class="nav-link active">Quienes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contacto.html" class="nav-link">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+    <div class="section-header">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <p class="section-description">En la Escuela de Canotaje, nos dedicamos a ofrecer formación gratuita y de calidad en deportes acuáticos. Nuestro objetivo es ayudar a los estudiantes a desarrollar su potencial físico y mental en un ambiente profesional y seguro.</p>
+    </div>
+        <div class="professor-carousel-wrapper">
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Las tarjetas se insertarán aquí -->
+            </div>
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="carousel-btn prev-btn" id="prevBtn">
+                <span>‹</span>
+            </button>
+            <div class="carousel-indicators" id="indicators">
+                <!-- Los indicadores se insertarán aquí -->
+            </div>
+            <button class="carousel-btn next-btn" id="nextBtn">
+                <span>›</span>
+            </button>
+        </div>
+    </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <img class="logo" src="../media/logo.png" alt="Escuela de Canotaje" >
+        </div>
+        <div>
+            <p>Contacto: info@escuelacanotaje.com</p>
+            <p>Teléfono: +123 456 7890</p>
+            <p>Dirección: Calle del Remo, Ciudad, País</p>
+        </div>
+
+    </footer>
+    <script src="../js/carrousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
