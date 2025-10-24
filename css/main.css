@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.nav-menu li a:hover {
+    color: #102847;
+}   
+
+.logo {
+    max-width: 130px;
+    height: 130px;
+}
+
+
+.banner {
+    width: 100%;
+    background-image: url('../media/fondobaner.png');
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+.botones {
+    display: flex;
+    gap: 20px;  
+    padding: 10px;
+    width: 500px;
+    height: 100px;
+    justify-content: center;    
+}   
+.botones button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gratis {
+    background-color: #f59a11;
+    color: white;
+}
+.gratis:hover {
+    background-color: #ffa500;
+}   
+
+.programas {
+    background-color: #ffffff;
+    color: #0e2440;
+}
+.programas:hover {
+    background-color: #e0e0e0;
+}
+
+.escuela {
+    background-color: #f0f8ff;
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.info {
+    max-width: 50%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around   ;
+}
+.info h3 {
+    text-align: center;
+    padding: 30px;
+}
+.info-gratis {
+
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+
+}
+
+.lista-calidad {
+    list-style: none;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    padding: 20px;
+}
+
+.info-gratis div {
+    max-width: 600px;
+}
+
+.info-gratis p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.info-gratis ul {
+    list-style: none;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+
+}
+.cursos {
+    padding: 50px 20px;
+    background-color: #e6f2ff;
+    text-align: center;
+}
+
+.gratuito {
+    background-color: #d1e7ff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 18px;
+}
+.gratuito h3 {
+    padding: 30px;
+}
+.gratuito p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+.contacto {
+    padding: 50px 20px;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.escuela h2 {  
+    font-size: 24px;
+}         
+
+footer {
+    background-color: #0E2440;
+    color: white;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}   
+footer div {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+    
+}
+footer a {
+    color: #f59a11;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+.info-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+.apoyo {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.apoyo img {
+    max-width: auto; 
+    height: 150px;
+    padding: 10px;
+}   
+
+.apoyin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #f0f8ff;
+}
+.apoyin h3 {
+    font-size: 18px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .botones {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    .info {
+        max-width: 100%;
+    }
+    .apoyo {
+        flex-direction: column;
+        gap: 20px;
+    }  
+    .info-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .apoyo img {
+        height: 100px;
+    }   
+}
